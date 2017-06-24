@@ -26,7 +26,7 @@
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Cyborg",
+  "theme": "Cosmo",
 
   // port to listen for requests on.
   "port" : 3001,
@@ -53,7 +53,7 @@
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 55,
 
   // language settings
   "locale": "locale/en.json",
@@ -115,7 +115,7 @@
   },
 
   // twitter, facebook, googleplus
-  "twitter": "RzeroD",
+  "twitter": "teamgameunits",
   "facebook": "yourfacebookpage",
   "googleplus": "yourgooglepluspage",
 
