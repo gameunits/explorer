@@ -5,15 +5,15 @@
 */
 {
   // name your instance!
-  "title": "IQUIDUS",
+  "title": "Gameunits Blockexplorer",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "Darkcoin",
+  "coin": "GameUnits",
 
   // coin symbol
-  "symbol": "DRK",
+  "symbol": "UNITS",
 
   // logo
   "logo": "/images/logo.png",
@@ -47,9 +47,9 @@
   // wallet settings
   "wallet": {
     "host": "localhost",
-    "port": 9332,
-    "user": "darkcoinrpc",
-    "pass": "123gfjk3R3pCCVjHtbRde2s5kzdf233sa"
+    "port": 1337,
+    "user": "gameunitsrpc",
+    "pass": "vaZFHCUBGmrUe1e5YZug9wFrVUmY8FMcmraDGK5idR1"
   },
 
   // confirmations
@@ -73,8 +73,8 @@
 
   // index page (valid options for difficulty are POW, POS or Hybrid)
   "index": {
-    "show_hashrate": true,
-    "difficulty": "POW",
+    "show_hashrate": false,
+    "difficulty": "POS",
     "last_txs": 100
   },
 
@@ -90,12 +90,12 @@
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "JBS",
+    "coin": "UNITS",
     "exchange": "BTC",
-    "enabled": ["bittrex"],
-    "cryptopia_id": "1658",
+    "enabled": ["yobit"],
+    "cryptopia_id": "290",
     "ccex_key" : "Get-Your-Own-Key",
-    "default": "bittrex"
+    "default": "yobit"
   },
 
   // richlist/top100 settings
@@ -115,7 +115,7 @@
   },
 
   // twitter, facebook, googleplus
-  "twitter": "iquidus",
+  "twitter": "RzeroD",
   "facebook": "yourfacebookpage",
   "googleplus": "yourgooglepluspage",
 
@@ -138,7 +138,7 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "COINBASE",
+  "supply": "BALANCES",
 
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
