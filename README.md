@@ -24,6 +24,10 @@ Create user with read/write access:
 
     > db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
 
+*note: If you're using mongo shell 2.4.x, use the following to create your user:
+
+    > db.addUser( { user: "username", pwd: "password", roles: [ "readWrite"] })
+
 ### Get the source
 
     git clone https://github.com/gameunits/explorer explorer
@@ -57,16 +61,16 @@ To stop the cluster you can use
 sync.js (located in scripts/) is used for updating the local databases. This script must be called from the explorers root directory.
 
     Usage: node scripts/sync.js [database] [mode]
-    
+
     database: (required)
     index [mode] Main index: coin info/stats, transactions & addresses
     market       Market data: summaries, orderbooks, trade history & chartdata
-    
+
     mode: (required for index database only)
     update       Updates index from last sync to current block
     check        checks index for (and adds) any missing transactions/addresses
     reindex      Clears index then resyncs from genesis to current block
-    
+
     notes:
     * 'current block' is the latest created block when script is executed.
     * The market database only supports (& defaults to) reindex mode.
@@ -80,8 +84,9 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
 
 *Example crontab; update index every minute and market data every 2 minutes*
 
-    */1 * * * * cd /path/to/explorer && /usr/bin/node scripts/sync.js index update > /dev/null 2>&1
-    */2 * * * * cd /path/to/explorer && /usr/bin/node scripts/sync.js market > /dev/null 2>&1
+    */1 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
+    */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
+    */5 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
 
 ### Wallet
 
@@ -116,7 +121,7 @@ To run sync.js with a larger stack size launch with
 
     node --stack-size=[SIZE] scripts/sync.js index update
 
-Where [SIZE] is an integer higher than the default. 
+Where [SIZE] is an integer higher than the default.
 
 *note: SIZE will depend on which blockchain you are using, you may need to play around a bit to find an optimal setting*
 
@@ -150,4 +155,3 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
