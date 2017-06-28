@@ -3,22 +3,12 @@ Iquidus Explorer - 1.6.1
 
 An open source block explorer written in node.js.
 
-### See it in action
-
-*  [Jumbucks](http://explorer.getjumbucks.com)
-*  [Sphere](http://sphere.iquidus.io)
-*  [SAR](http://explorer.sarcoin.info)
-*  [Vanillacoin](https://blockchain.vanillacoin.net/)
-*  [Neoscoin](http://explorer.infernopool.com/)  
-*  [C2Chain](http://c2chain.info/)
-
-*note: If you would like your instance mentioned here contact me*
-
 ### Requires
 
 *  node.js >= 0.10.28
 *  mongodb 2.6.x
-*  *coind
+*  [gameunitsd running](https://github.com/gameunits/gameunits) 
+*  libkrb5-dev 
 
 ### Create database
 
@@ -40,7 +30,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/iquidus/explorer explorer
+    git clone https://github.com/gameunits/explorer explorer
 
 ### Install node modules
 

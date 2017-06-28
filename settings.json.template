@@ -5,6 +5,7 @@
 */
 {
   // name your instance!
+
   "title": "Gameunits Blockexplorer",
 
   "address": "127.0.0.1:3001",
@@ -61,7 +62,7 @@
   // menu settings
   "display": {
     "api": true,
-    "markets": true,
+    "markets": false,
     "richlist": true,
     "twitter": true,
     "facebook": false,
@@ -73,7 +74,7 @@
 
   // index page (valid options for difficulty are POW, POS or Hybrid)
   "index": {
-    "show_hashrate": false,
+    "show_hashrate": true,
     "difficulty": "POS",
     "last_txs": 100
   },
@@ -130,7 +131,7 @@
   "txcount": 100,
 
   //show total sent & received on address page (set false if PoS)
-  "show_sent_received": true,
+  "show_sent_received": false,
 
   // how to calculate current coin supply
   // COINBASE : total sent from coinbase (PoW)
